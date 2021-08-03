@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">   
+    <title>Buy/Sell</title>
+</head>
+<body id="wavy-body">
+    <div id="floating-logo">
+        <img id="logo" src="{% static 'artsy_white_logo.png' %}" alt="one stock logo"><h1 id="one-stock-dash">neStock</h1>
+    </div>
+    <div id="dash-all">
+        <div id="navbar">
+            <h3 id="dash-welcome"> Welcome, {{ current_user }} </h3> 
+            <div id="dash-links-feed">
+                <a href="/success"> Dashboard </a> | <a href="/buy_sell">Buy/Sell</a> | <a href="/profile">Profile</a> | <a href="/logout">Logout</a> 
+            </div>        
+        </div> 
+        <div id="dash-stuff">
+            <div id="dash-stats-buy">
+                <h2 id="ready">Ready to trade? Navigate to one of these sites to buy/sell.</h2>
+                <a class="external" href="https://robinhood.com/us/en/" target = "_blank">Robinhood</a>
+                <br><br>
+                <a class="external" href="https://www.tdameritrade.com/home.html" target = "_blank">Ameritrade</a>
+                <br><br>
+                <a class="external" href="https://www.webull.com/" target = "_blank">Webull</a>
+                <br><br>
+                <h3 id="ready-small">Still not sure? Go back to <a href="/success">dashboard</a>.</h2>
+            </div>    
+        </div>
+    </div>
+    <hr id="">
+    <div id="feed-bottom-line">
+        <h4>OneStock Investment Tools</h4>
+        <h5>Copyright 2020-2021. All rights reserved.</h5>
+    </div>
+</body>
+</html> 
+
+
+
+

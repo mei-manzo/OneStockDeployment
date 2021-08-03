@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">   
+    <title>Feed</title>
+</head>
+<body id="wavy-body">
+    <div id="floating-logo">
+        <img id="logo" src="{% static 'artsy_white_logo.png' %}" alt="one stock logo"><h1 id="one-stock-dash">neStock</h1>
+    </div>
+    <div id="dash-all">
+        <div id="navbar">
+            <h3 id="dash-welcome"> Welcome, {{ current_user }} </h3> 
+            <div id="dash-links-feed">
+                <a href="/success"> Dashboard </a> | <a href="/buy_sell">Buy/Sell</a> | <a href="/profile">Profile</a> | <a href="/logout">Logout</a> 
+            </div>
+        </div> 
+        <div id="dash-stuff">
+        <h2 id="custom-feed">Your Custom Feed</h2>
+            {% for key, value in consolidated.items %}
+                <div id="feed-article">
+                    {% if stock_name == "BYND" %}
+                        <img id="b-logo" src="{% static 'beyondlogo.jpg' %}" alt="beyond logo">
+                    {% elif stock_name == "AMZN" %}
+                        <img id="a-logo" src="{% static 'amazon.jpg' %}" alt="amazon logo">
+                    {% elif stock_name == "GOOGL" %}
+                        <img id="g-logo" src="{% static 'google.jpg' %}" alt="google logo">
+                    {% endif %}
+                        <a id = "feed-link" href="{{ value }}" target = "_blank">
+                            <p>{{ key }}</p>
+                        </a>
+                        {% if key not in saved_headlines %}
+                            <a class="saver" href="/load_save/{{ key }}">Save</a>
+                        {% else %}
+                            <a class="unsaver" href="/load_save/{{ key }}">Unsave</a>
+                        {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <hr id="">
+    <div id="feed-bottom-line">
+        <h4>OneStock Investment Tools</h4>
+        <h5>Copyright 2020-2021. All rights reserved.</h5>
+    </div>
+</body>
+</html> 

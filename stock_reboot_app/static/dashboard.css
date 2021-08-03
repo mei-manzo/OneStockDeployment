@@ -1,0 +1,109 @@
+.first-name{
+    margin-left:68px;
+}
+.last-name{
+    margin-left:70px;
+}
+
+.alias{
+    margin-left:200px;
+}
+
+.email{
+    margin-left: 101px;
+}
+
+.password{
+    margin-left: 78px;
+}
+
+.username{
+    margin-left: 75px;
+}
+.confirm-password{
+    margin-left: 20px;
+}
+#head{
+    padding-left: 10px;
+    padding-top: .5px;
+    padding-bottom: .5px;
+    width: 100%;
+    display: flex;
+background: rgb(34,0,140);
+    font-family: DroidSans;
+    font-size: 1.1em;
+    font-style: italic;
+}
+#logo{
+    padding-top: 20px;
+    margin-left: 0px;
+    width: 50px;
+    height: 40px;
+}
+
+body{
+    background-color:whitesmoke;
+    margin: 0px;
+}
+#big-container{
+    width: 1200px;
+    margin-left: 150px;
+    border: 2px solid grey;
+    border-width: thin;
+    border-color: grey;
+    background-color: white;
+
+    overflow: hidden;
+    background-color: #f0f8ff;
+    -moz-box-shadow: 0px 0px 20px #000000;
+    -webkit-box-shadow: 0px 0px 20px #000000;
+    box-shadow: 0px 0px 10px #000000;
+}
+#small-container{
+    display: flex;
+}
+#get-started{
+    color: darkblue;
+    width: 100%;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+#container-1{
+    flex:1;
+    margin: 0px;
+    margin-right: 0px;
+    padding: 0px;
+    padding-left: 50px;
+    width: 750px;
+}
+
+#container-2{
+    width: 750px;
+    flex:1;
+    padding: 0px;
+    margin: 0px;
+}
+
+div{
+    margin-bottom: 20px;
+}
+#button-1{
+    margin-left: 227px;
+}
+
+#button-2{
+    margin-left: 200px;
+}
+
+#one-stock{
+    color: white;
+}
+.login-email{
+    margin-left: 43px;
+}
+.login-password{
+    margin-left: 20px;
+}
